@@ -18,8 +18,16 @@
     <ProjectCapability Include="OpenProjectFile"/>
     <ProjectCapability Include="HandlesOwnReload"/>
     <ProjectCapability Include="ProjectConfigurationsDeclaredAsItems"/>
+
+    <!-- for project references -->
     <ProjectCapability Include="ReferencesFolder"/>
     <ProjectCapability Include="ProjectReferences"/>
+
+    <!-- for nuget  -->
+    <ProjectCapability Include="PackageReferences"/>
+    <ProjectCapability Include="AssemblyReferences"/>
+    <ProjectCapability Include="DeclaredSourceItems"/>
+    <ProjectCapability Include="UserSourceItems"/>
   </ItemGroup>
 
   <ItemGroup>
