@@ -18,13 +18,15 @@
     <ProjectCapability Include="OpenProjectFile"/>
     <ProjectCapability Include="HandlesOwnReload"/>
     <ProjectCapability Include="ProjectConfigurationsDeclaredAsItems"/>
+    <ProjectCapability Include="ReferencesFolder"/>
+    <ProjectCapability Include="ProjectReferences"/>
   </ItemGroup>
 
   <ItemGroup>
     <PropertyPageSchema Include="
                         $(MSBuildThisFileDirectory)Rules\general.xaml;
                         ">
-        <Context>Project</Context>
+      <Context>Project</Context>
     </PropertyPageSchema>
     <PropertyPageSchema Include="
                         $(MSBuildThisFileDirectory)Rules\ProjectItemsSchema.xaml;
@@ -58,10 +60,15 @@
     <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\script.browseobject.xaml;">
       <Context>BrowseObject</Context>
     </PropertyPageSchema>
+
+    <!-- for project references to work -->
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\ResolvedProjectReference.xaml">
+      <Context>ProjectSubscriptionService;BrowseObject</Context>
+    </PropertyPageSchema>
   </ItemGroup>
 
   <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')" />
-  
+
   <Target Name="Run">
     <Message Text="$(RunCommandArguments)" />
     <Exec Command='$(RunCommand) "$(MSBuildProjectDirectory)\$(StartItem)" $(RunCommandArguments)' WorkingDirectory="$(RunWorkingDirectory)" />
@@ -71,5 +78,5 @@
   </Target>
 
   <Target Name="Rebuild">
-  </Target>  
+  </Target>
 </Project>
