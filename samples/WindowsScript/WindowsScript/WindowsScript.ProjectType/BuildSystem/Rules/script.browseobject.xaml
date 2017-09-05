@@ -10,6 +10,18 @@
         <DataSource Persistence="ProjectFile" Label="Configuration" ItemType="Script" HasConfigurationCondition="false" />
     </Rule.DataSource>
 
+    <Rule.Categories>
+        <Category Name="Advanced" DisplayName="Advanced" />
+        <Category Name="Misc" DisplayName="Misc" />
+    </Rule.Categories>
+
+    <DynamicEnumProperty
+      Name="{}{ItemType}"
+      DisplayName="Build Action"
+      Category="Advanced"
+      Description="How the file relates to the build and deployment processes."
+      EnumProvider="ItemTypes" />
+
     <StringProperty Name="Identity" DisplayName="File Name" ReadOnly="true" Category="Misc">
         <StringProperty.DataSource>
             <DataSource Persistence="Intrinsic" ItemType="Script" PersistedName="Identity" />

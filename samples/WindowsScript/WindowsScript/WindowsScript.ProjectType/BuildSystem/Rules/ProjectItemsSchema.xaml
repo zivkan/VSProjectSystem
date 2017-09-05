@@ -15,11 +15,19 @@
         ItemType="None">
     </ContentType>
 
+    <ContentType
+        Name="JSON"
+        DisplayName="JSON"
+        ItemType="Json">
+    </ContentType>
+
     <ItemType Name="Script" DisplayName="Script"/>
     <ItemType Name="None" DisplayName="Does not participate in build"/>
+    <ItemType Name="Json" DisplayName="Json" />
 
     <FileExtension Name=".vbs" ContentType="Script"/>
     <FileExtension Name=".jS" ContentType="Script"/>
     <FileExtension Name=".txt" ContentType="Text"/>
+    <FileExtension Name=".json" ContentType="JSON"/>
 </ProjectSchemaDefinitions>
 

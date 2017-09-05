@@ -62,10 +62,12 @@
       <Context>BrowseObject</Context>
     </PropertyPageSchema>
 
-    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\script.xaml;">
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\script.xaml;
+                        $(MSBuildThisFileDirectory)Rules\json.xaml;">
       <Context>File</Context>
     </PropertyPageSchema>
-    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\script.browseobject.xaml;">
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\script.browseobject.xaml;
+                        $(MSBuildThisFileDirectory)Rules\json.browseobject.xaml">
       <Context>BrowseObject</Context>
     </PropertyPageSchema>
 
