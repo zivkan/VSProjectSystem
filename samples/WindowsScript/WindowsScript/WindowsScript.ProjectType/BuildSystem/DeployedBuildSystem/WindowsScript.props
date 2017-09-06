@@ -10,5 +10,11 @@
     <RunCommand>$(WinDir)\System32\cscript.exe</RunCommand>
     <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
     <StartItem>Start.js</StartItem>
+    
+    <!-- This project system references .NET assemblies, but is not .NET itself. I don't want
+    users of the project system needing to bump the TFM version number when new versions of
+    .NET are released, so try to use a version that probably won't be released for a long, long
+    time. I haven't seen any issues doing this yet. -->
+    <TargetFrameworkMoniker>.NETFramework,Version=v9.9.9</TargetFrameworkMoniker>
   </PropertyGroup>
 </Project>

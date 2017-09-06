@@ -21,6 +21,7 @@
 
     <!-- for project references -->
     <ProjectCapability Include="ReferencesFolder"/>
+    <ProjectCapability Include="DependenciesTree"/>
     <ProjectCapability Include="ProjectReferences"/>
 
     <!-- for nuget  -->

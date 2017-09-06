@@ -10,5 +10,8 @@
     <Script Include="**\*.js" />
     <Script Include="**\*.vbs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
   <Import Project="$(CustomProjectExtensionsPath)WindowsScript.targets" />
 </Project>
