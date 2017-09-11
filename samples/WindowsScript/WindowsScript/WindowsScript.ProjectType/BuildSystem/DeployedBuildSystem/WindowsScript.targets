@@ -83,7 +83,7 @@
 
   <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')" />
 
-  <Target Name="Run">
+  <!--<Target Name="Run">
     <Message Text="$(RunCommandArguments)" />
     <Exec Command='$(RunCommand) "$(MSBuildProjectDirectory)\$(StartItem)" $(RunCommandArguments)' WorkingDirectory="$(RunWorkingDirectory)" />
   </Target>
@@ -92,5 +92,5 @@
   </Target>
 
   <Target Name="Rebuild">
-  </Target>
+  </Target>-->
 </Project>
